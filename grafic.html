@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>График работы</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-link">🏠 На главную</a>
+        <h1>📅 График работы</h1>
+    </header>
+    <main>
+        <h2>📌 Добавить рабочий день</h2>
+        <form id="workScheduleForm">
+            <label for="workDays">📆 Дата:</label>
+            <input type="date" id="workDays" required>
+
+            <label for="shiftType">⏳ Тип смены:</label>
+            <select id="shiftType">
+                <option value="weekend">Выходной</option>
+                <option value="full">Полный рабочий день (08:00 - 23:00)</option>
+                <option value="part_morning">Короткий до 15:00</option>
+                <option value="part_evening">Короткий до 18:00</option>
+                <option value="support">Подмога (11:00 - 15:00)</option>
+            </select>
+            <button type="submit">✅ Добавить</button>
+        </form>
+
+        <h2>📊 График работы</h2>
+        <table id="workScheduleTable">
+            <thead>
+                <tr>
+                    <th>📅 День</th>
+                    <th>📆 Дата</th>
+                    <th>⏳ Смена</th>
+                    <th>🕒 Время</th>
+                    <th>✏️ Редактировать</th>
+                    <th>❌ Удалить</th>
+                </tr>
+            </thead>
+            <tbody id="workScheduleList"></tbody>
+        </table>
+
+        <button id="clearSchedule">🔄 Очистить график</button>
+        <button id="exportSchedule">📤 Экспорт в Excel</button>
+    </main>
+    <script src="scripts/grafic.js"></script>
+</body>
+</html>

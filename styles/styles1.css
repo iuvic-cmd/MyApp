@@ -1,0 +1,112 @@
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+    color: #444;
+    text-align: center;
+}
+
+/* Стили для ссылки на главную */
+.home-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Стили для input */
+input[type="date"], input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Стили для label */
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Стили для списка истории смен */
+#shiftHistory {
+    list-style-type: none;
+    padding: 0;
+}
+
+#shiftHistory li {
+    background-color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Стили для кнопки удалить */
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Стили для общей статистики */
+#totalDistrictOrders, #totalNightOrders, #totalSum {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Стили для общего заработка */
+#totalEarnings {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Стили для кнопки сброса данных */
+#resetData {
+    background-color: #f44336;
+}
+
+#resetData:hover {
+    background-color: #d32f2f;
+}

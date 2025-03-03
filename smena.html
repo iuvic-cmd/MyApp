@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смена</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles/styles1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="home-link">🏠 На главную</a>
+        <h1>Управление сменой</h1>
+    </header>
+
+    <label for="date">Выберите дату:</label>
+    <input type="date" id="date">
+
+    <button id="openShift">Открыть смену</button>
+    <button id="closeShift">Закрыть смену</button>
+
+    <h2>Добавить заказы</h2>
+    <label for="districtOrders">Районные заказы (50 лей):</label>
+    <input type="number" id="districtOrders" min="0">
+
+    <label for="nightOrders">Ночные заказы (65 лей):</label>
+    <input type="number" id="nightOrders" min="0">
+
+    <button id="addOrders">Добавить заказы</button>
+
+    <h2>История смен</h2>
+    <ul id="shiftHistory"></ul>
+
+    <h2>Общая статистика</h2>
+    <p>Общее количество районных заказов: <span id="totalDistrictOrders">0</span></p>
+    <p>Общее количество ночных заказов: <span id="totalNightOrders">0</span></p>
+    <p>Итого заказов: <span id="totalOrders">0</span></p>
+
+    <h2>Общий заработок</h2>
+    <p id="totalEarnings">0 лей</p>
+
+    <h2>Сброс данных</h2>
+    <button id="resetData">Сбросить данные (начать заново)</button>
+
+    <h2>Экспорт данных</h2>
+    <button id="exportData">Экспорт в Excel</button>
+
+    <script src="scripts/app.js" defer></script>
+</body>
+</html>
