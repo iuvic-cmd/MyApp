@@ -13,6 +13,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalNightOrdersDisplay = document.getElementById("totalNightOrders");
     const totalOrdersDisplay = document.getElementById("totalOrders");
 
+    // Функция для форматирования даты
+    function formatDate(dateString) {
+        const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+        const date = new Date(dateString);
+        const dayOfWeek = daysOfWeek[date.getDay()];
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = String(date.getFullYear()).slice(-2); // Берем последние две цифры года
+        return `${dayOfWeek} ${day}.${month}.${year}`;
+    }
+
     // Загрузка истории смен
     function loadShiftHistory() {
         shiftHistoryList.innerHTML = "";
@@ -143,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Экспорт данных в Excel
-    exportDataBtn.addEventListener("click", function () {
+exportDataBtn.addEventListener("click", function () {
         const shifts = JSON.parse(localStorage.getItem("shifts")) || [];
         if (shifts.length === 0) {
             alert("Нет данных для экспорта!");
